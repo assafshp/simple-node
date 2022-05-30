@@ -1,10 +1,11 @@
-console.log('assaf');
+const express = require('express');
 
+const app = express();
 
-setTimeout((req,res) => {
-    console.log('aaaa');
-},1000);
+app.get('/', (req, res) => {
+    console.log('got request');
+    res.send('Harel');
+});
 
-console.log('strauss');
-
-console.log(process.memoryUsage());
+app.listen(8084);
+console.log('app is running');
